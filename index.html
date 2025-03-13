@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="input.css" />
+  </head>
+  <body
+    class="bg-[#F8F9FA]  text-[#212529]  transition-colors duration-300 dark"
+  >
+    <div class="container mx-auto p-4">
+      <!-- Header -->
+      <header class="flex justify-between items-center mb-8">
+        <h1
+          class="text-3xl font-bold text-[#007BFF] cursor-pointer"
+          onclick="loadNews()"
+        >
+          News App
+        </h1>
+        <button
+          id="theme-toggle"
+          class="p-2 rounded-full bg-[#F1F3F5]  hover:bg-[#007BFF] hover:text-white  transition-colors duration-300"
+        >
+          🌙
+        </button>
+      </header>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <button
+          class="category-btn px-4 py-2 rounded-full bg-[#F1F3F5] ] hover:bg-[#007BFF] hover:text-white  transition-colors duration-300"
+          data-category="general"
+        >
+          General
+        </button>
+        <button
+          class="category-btn px-4 py-2 rounded-full bg-[#F1F3F5]  hover:bg-[#007BFF] hover:text-white  transition-colors duration-300"
+          data-category="business"
+        >
+          Business
+        </button>
+        <button
+          class="category-btn px-4 py-2 rounded-full bg-[#F1F3F5]  hover:bg-[#007BFF] hover:text-white
+          data-category="technology"
+        >
+          Technology
+        </button>
+        <button
+          class="category-btn px-4 py-2 rounded-full bg-[#F1F3F5] ] hover:bg-[#007BFF] hover:text-white transition-colors duration-300"
+          data-category="sports"
+        >
+          Sports
+        </button>
+        <button
+          class="category-btn px-4 py-2 rounded-full bg-[#F1F3F5] hover:bg-[#007BFF] hover:text-white transition-colors duration-300"
+          data-category="health"
+        >
+          Health
+        </button>
+      </div>
+
+      <!-- News Cards Container -->
+      <div
+        id="news-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center gap-4 mt-8">
+        <button
+          id="prev-btn"
+          class="px-4 py-2 rounded-full bg-[#F1F3F5] hover:bg-[#007BFF] hover:text-white  disabled:opacity-50 transition-colors duration-300"
+        >
+          Previous
+        </button>
+        <button
+          id="next-btn"
+          class="px-4 py-2 rounded-full bg-[#F1F3F5]  hover:bg-[#007BFF] hover:text-white  disabled:opacity-50 transition-colors duration-300"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
