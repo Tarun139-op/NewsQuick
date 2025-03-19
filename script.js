@@ -1,5 +1,5 @@
 
-// const API_KEY = "906af1cc135044dc89a4a4eae0e64001"; 
+const API_KEY = "906af1cc135044dc89a4a4eae0e64001"; 
 const BASE_URL = "https://newsapi.org/v2/top-headlines";
 let currentPage = 1;
 let currentCategory = "general";
